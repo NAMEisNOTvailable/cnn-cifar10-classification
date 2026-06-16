@@ -42,6 +42,10 @@ README.md    Portfolio overview and result summary
 - Model comparison and diagnostic reporting
 - Clear technical communication for experimental results
 
+## License and Data
+
+Original notebook code and documentation are licensed under the MIT License. CIFAR-10 is an external dataset and is not owned or relicensed by this repository; follow the original dataset terms when downloading or reusing it.
+
 ## Status
 
 Academic portfolio project. The repository is organised so reviewers can quickly understand the experiment before opening the notebook.
