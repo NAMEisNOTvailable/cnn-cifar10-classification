@@ -4,12 +4,17 @@ __pycache__/
 .ipynb_checkpoints/
 .venv/
 venv/
+*.egg-info/
 
 # Generated model artefacts
 *.pt
 *.pth
 *.h5
 *.keras
+data/
+results/smoke/
+results/smoke-*/
+results/full/
 
 # OS/editor noise
 .DS_Store

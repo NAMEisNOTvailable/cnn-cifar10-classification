@@ -1,0 +1,19 @@
+{
+  "run_type": "single executed notebook run",
+  "dataset": "CIFAR-10",
+  "note": "These metrics summarize the executed notebook outputs committed with the portfolio project. Future reruns should use the scripted workflow, deterministic split seed, and clean validation transform.",
+  "models": [
+    {
+      "model": "ImageNet-pretrained ResNet-18 fine-tuned on CIFAR-10",
+      "test_accuracy": 0.9331,
+      "test_loss": 0.2240,
+      "trainable_parameters": 11173962
+    },
+    {
+      "model": "AlexNet-style CNN trained from scratch",
+      "test_accuracy": 0.8777,
+      "test_loss": 0.3826,
+      "trainable_parameters": 35855178
+    }
+  ]
+}
