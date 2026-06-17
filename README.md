@@ -1,6 +1,11 @@
 # CNN CIFAR-10 Classification
 
-CIFAR-10 computer vision project comparing an ImageNet-pretrained ResNet-18 fine-tuned on CIFAR-10 against an AlexNet-style CNN trained from scratch.
+[![Smoke tests](https://github.com/NAMEisNOTvailable/cnn-cifar10-classification/actions/workflows/smoke.yml/badge.svg)](https://github.com/NAMEisNOTvailable/cnn-cifar10-classification/actions/workflows/smoke.yml)
+![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11-blue)
+![PyTorch](https://img.shields.io/badge/PyTorch-CNN%20training-ee4c2c)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+PyTorch image-classification portfolio project comparing an ImageNet-pretrained ResNet-18 fine-tuned on CIFAR-10 against an AlexNet-style CNN trained from scratch.
 
 ## Project Snapshot
 
@@ -10,7 +15,9 @@ CIFAR-10 computer vision project comparing an ImageNet-pretrained ResNet-18 fine
 | Models | ImageNet-pretrained ResNet-18 fine-tuning and AlexNet-style CNN from scratch |
 | Selected run | ResNet-18 reached 93.31% test accuracy in a single executed notebook run |
 | Comparison point | Accuracy, model size, training behaviour, confusion matrix, and class-level errors |
-| Main artefacts | [`notebooks/cnn_cifar10_classification.ipynb`](notebooks/cnn_cifar10_classification.ipynb), [`src/cnn_cifar10_classification`](src/cnn_cifar10_classification), [`results`](results) |
+| Main artefacts | [`notebooks/cnn_cifar10_classification.ipynb`](notebooks/cnn_cifar10_classification.ipynb), [`src/cnn_cifar10_classification`](src/cnn_cifar10_classification), [`results`](results), [`docs/portfolio_summary.md`](docs/portfolio_summary.md) |
+
+![Selected run comparison](assets/selected_run_comparison.png)
 
 ## What This Demonstrates
 
@@ -33,9 +40,21 @@ Machine-readable selected-run metrics are saved in [`results/selected_run_summar
 
 The script workflow uses a deterministic train/validation split seed and keeps validation/test transforms deterministic. Training augmentation is applied only to the training subset.
 
+## Reviewer Guide
+
+| What to inspect | Where |
+| --- | --- |
+| Executed notebook with training logs, confusion matrices, reports, and plots | [`notebooks/cnn_cifar10_classification.ipynb`](notebooks/cnn_cifar10_classification.ipynb) |
+| Reusable training and evaluation workflow | [`src/cnn_cifar10_classification/experiment.py`](src/cnn_cifar10_classification/experiment.py) |
+| Model definitions | [`src/cnn_cifar10_classification/models.py`](src/cnn_cifar10_classification/models.py) |
+| Reproducibility and smoke-test coverage | [`tests`](tests), [`.github/workflows/smoke.yml`](.github/workflows/smoke.yml) |
+| Portfolio positioning and caveats | [`docs/portfolio_summary.md`](docs/portfolio_summary.md) |
+
 ## Repository Structure
 
 ```text
+assets/     Generated result chart for GitHub display
+docs/       Portfolio/reviewer notes
 notebooks/   Executed experiment notebook
 results/     Selected-run summary files
 scripts/     Command-line entry point
@@ -85,6 +104,12 @@ Run tests:
 
 ```bash
 pytest
+```
+
+Regenerate the README result chart:
+
+```bash
+python scripts/generate_result_assets.py
 ```
 
 ## Skills Shown
