@@ -34,6 +34,15 @@ notebooks/   Main experiment notebook
 README.md    Portfolio overview and result summary
 ```
 
+## Environment
+
+The notebook metadata records Python 3.10.0. The reproducible environment is captured in [`requirements.txt`](requirements.txt), covering PyTorch, torchvision, NumPy, Matplotlib, scikit-learn, Seaborn, Jupyter, and ipykernel.
+
+```bash
+pip install -r requirements.txt
+jupyter notebook notebooks/cnn_cifar10_classification.ipynb
+```
+
 ## Skills Shown
 
 - CNN model training and evaluation
