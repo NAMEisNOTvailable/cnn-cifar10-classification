@@ -4,21 +4,21 @@ This repository is best presented as a supporting machine-learning portfolio pro
 
 ## What To Highlight
 
-- Reproducible project structure: package metadata, `src/`, `scripts/`, tests, and CI.
-- Careful model comparison language: the ResNet-18 result is fine-tuning, not a from-scratch benchmark.
+- Reproducible project structure: package metadata, `src/`, `scripts/`, tests, and automated checks.
+- Clear model comparison language: the ResNet-18 result is ImageNet-pretrained fine-tuning.
 - Evaluation hygiene: training augmentation is not used for validation/test transforms.
 - Reviewable outputs: selected-run metrics are available as JSON/CSV and as a generated chart.
-- Practical CI: quick FakeData smoke run verifies the training path without requiring CIFAR-10 downloads or GPU time.
+- Practical automation: a quick FakeData smoke run verifies the training path before full CIFAR-10 training.
 
-## What Not To Overclaim
+## Scope Notes
 
-- Do not present the 93.31% result as a multi-seed benchmark.
-- Do not claim the comparison isolates architecture quality, because ResNet-18 uses ImageNet pretrained weights.
-- Do not position this as original computer-vision research; it is a well-organised academic portfolio project.
+- The 93.31% result is one selected train/validation/test split.
+- ResNet-18 uses ImageNet-pretrained weights, so the comparison includes a transfer-learning advantage.
+- The project is an academic portfolio implementation focused on workflow, evaluation, and reporting.
 
-## Interview Talking Points
+## Discussion Points
 
 - Why validation transforms should stay deterministic.
-- Why a CI smoke run should be small and separate from full GPU training.
-- How to make notebook work more reviewable through scripts, tests, and machine-readable results.
-- Why parameter count alone is not a reliable measure of model quality.
+- Why a quick smoke run should stay separate from full GPU training.
+- How scripts, tests, and machine-readable results make notebook work easier to inspect.
+- How parameter count relates to accuracy, training cost, and transfer learning.

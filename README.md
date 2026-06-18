@@ -24,12 +24,12 @@ PyTorch image-classification portfolio project comparing an ImageNet-pretrained 
 - Built and trained deep-learning image classifiers on CIFAR-10 with PyTorch.
 - Compared ImageNet-pretrained ResNet-18 fine-tuning against a larger AlexNet-style baseline trained from scratch.
 - Used data augmentation, regularisation, and learning-rate scheduling.
-- Evaluated model behaviour beyond headline accuracy with loss curves, confusion matrices, and class-level diagnostics.
-- Reported the practical performance and parameter-count tradeoff without treating a single split as a benchmark claim.
+- Evaluated model behaviour with accuracy, loss curves, confusion matrices, and class-level diagnostics.
+- Reported the selected-run performance and parameter-count tradeoff for the ResNet-18 and AlexNet-style models.
 
 ## Results Summary
 
-The committed notebook contains one executed run. These numbers are useful as a portfolio snapshot, not as a multi-seed benchmark.
+The committed notebook contains one executed run. These numbers are a portfolio snapshot for the selected train/validation/test split.
 
 | Model | Test Accuracy | Approx. Parameters | Notes |
 | --- | ---: | ---: | --- |
@@ -40,7 +40,7 @@ Machine-readable selected-run metrics are saved in [`results/selected_run_summar
 
 The script workflow uses a deterministic train/validation split seed and keeps validation/test transforms deterministic. Training augmentation is applied only to the training subset.
 
-## Reviewer Guide
+## Project Notes
 
 | What to inspect | Where |
 | --- | --- |
@@ -54,7 +54,7 @@ The script workflow uses a deterministic train/validation split seed and keeps v
 
 ```text
 assets/     Generated result chart for GitHub display
-docs/       Portfolio/reviewer notes
+docs/       Portfolio notes and modelling caveats
 notebooks/   Executed experiment notebook
 results/     Selected-run summary files
 scripts/     Command-line entry point
@@ -122,9 +122,9 @@ python scripts/generate_result_assets.py
 
 ## Limitations
 
-- The headline results come from a single executed train/validation/test split.
-- The ResNet-18 result is a fine-tuning result, not a from-scratch architecture comparison.
-- The repository now includes smoke tests and a quick run, but the full 50-epoch CIFAR-10 training is intentionally not run in CI.
+- Results come from one executed train/validation/test split.
+- The ResNet-18 result is a fine-tuning result using ImageNet-pretrained weights.
+- The repository includes smoke tests and a quick run; full 50-epoch CIFAR-10 training remains a local/GPU workflow.
 
 ## License and Data
 
@@ -132,4 +132,4 @@ Original notebook code and documentation are licensed under the MIT License. CIF
 
 ## Status
 
-Academic portfolio project. The repository is organised so reviewers can quickly inspect the result snapshot, run a fast smoke check, or open the full notebook.
+Academic portfolio project. The repository is organised around a result snapshot, a fast smoke check, and the full executed notebook.
