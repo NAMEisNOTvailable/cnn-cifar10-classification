@@ -1,6 +1,6 @@
-# Portfolio Summary
+# Project Summary
 
-This repository is best presented as a supporting machine-learning portfolio project. It shows a clean PyTorch workflow for CIFAR-10 image classification, with an ImageNet-pretrained ResNet-18 fine-tuned against an AlexNet-style CNN trained from scratch.
+This repository shows a PyTorch workflow for CIFAR-10 image classification, with an ImageNet-pretrained ResNet-18 fine-tuned against an AlexNet-style CNN trained from scratch.
 
 ## What To Highlight
 
@@ -14,7 +14,7 @@ This repository is best presented as a supporting machine-learning portfolio pro
 
 - The 93.31% result is one selected train/validation/test split.
 - ResNet-18 uses ImageNet-pretrained weights, so the comparison includes a transfer-learning advantage.
-- The project is an academic portfolio implementation focused on workflow, evaluation, and reporting.
+- The project is an academic implementation focused on workflow, evaluation, and reporting.
 
 ## Discussion Points
 

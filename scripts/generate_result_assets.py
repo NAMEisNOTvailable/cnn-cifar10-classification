@@ -58,7 +58,7 @@ def generate_comparison_chart(summary_path: Path, output_path: Path) -> None:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Generate portfolio result assets.")
+    parser = argparse.ArgumentParser(description="Generate project result assets.")
     parser.add_argument(
         "--summary",
         type=Path,

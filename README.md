@@ -5,7 +5,7 @@
 ![PyTorch](https://img.shields.io/badge/PyTorch-CNN%20training-ee4c2c)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-PyTorch image-classification portfolio project comparing an ImageNet-pretrained ResNet-18 fine-tuned on CIFAR-10 against an AlexNet-style CNN trained from scratch.
+PyTorch image-classification project comparing an ImageNet-pretrained ResNet-18 fine-tuned on CIFAR-10 against an AlexNet-style CNN trained from scratch.
 
 ## Project Snapshot
 
@@ -15,7 +15,7 @@ PyTorch image-classification portfolio project comparing an ImageNet-pretrained 
 | Models | ImageNet-pretrained ResNet-18 fine-tuning and AlexNet-style CNN from scratch |
 | Selected run | ResNet-18 reached 93.31% test accuracy in a single executed notebook run |
 | Comparison point | Accuracy, model size, training behaviour, confusion matrix, and class-level errors |
-| Main artefacts | [`notebooks/cnn_cifar10_classification.ipynb`](notebooks/cnn_cifar10_classification.ipynb), [`src/cnn_cifar10_classification`](src/cnn_cifar10_classification), [`results`](results), [`docs/portfolio_summary.md`](docs/portfolio_summary.md) |
+| Main artefacts | [`notebooks/cnn_cifar10_classification.ipynb`](notebooks/cnn_cifar10_classification.ipynb), [`src/cnn_cifar10_classification`](src/cnn_cifar10_classification), [`results`](results), [`docs/project_summary.md`](docs/project_summary.md) |
 
 ![Selected run comparison](assets/selected_run_comparison.png)
 
@@ -29,7 +29,7 @@ PyTorch image-classification portfolio project comparing an ImageNet-pretrained 
 
 ## Results Summary
 
-The committed notebook contains one executed run. These numbers are a portfolio snapshot for the selected train/validation/test split.
+The committed notebook contains one executed run. These numbers are a selected-run snapshot for the train/validation/test split.
 
 | Model | Test Accuracy | Approx. Parameters | Notes |
 | --- | ---: | ---: | --- |
@@ -48,19 +48,19 @@ The script workflow uses a deterministic train/validation split seed and keeps v
 | Reusable training and evaluation workflow | [`src/cnn_cifar10_classification/experiment.py`](src/cnn_cifar10_classification/experiment.py) |
 | Model definitions | [`src/cnn_cifar10_classification/models.py`](src/cnn_cifar10_classification/models.py) |
 | Reproducibility and smoke-test coverage | [`tests`](tests), [`.github/workflows/smoke.yml`](.github/workflows/smoke.yml) |
-| Portfolio positioning and caveats | [`docs/portfolio_summary.md`](docs/portfolio_summary.md) |
+| Project positioning and caveats | [`docs/project_summary.md`](docs/project_summary.md) |
 
 ## Repository Structure
 
 ```text
 assets/     Generated result chart for GitHub display
-docs/       Portfolio notes and modelling caveats
+docs/       Project notes and modelling caveats
 notebooks/   Executed experiment notebook
 results/     Selected-run summary files
 scripts/     Command-line entry point
 src/         Reusable dataset, model, training, and evaluation code
 tests/       Pytest coverage for split logic, transforms, models, and quick runs
-README.md    Portfolio overview and result summary
+README.md    Project overview and result summary
 ```
 
 ## Environment
@@ -132,4 +132,4 @@ Original notebook code and documentation are licensed under the MIT License. CIF
 
 ## Status
 
-Academic portfolio project. The repository is organised around a result snapshot, a fast smoke check, and the full executed notebook.
+Academic image-classification project organised around a result snapshot, a fast smoke check, and the full executed notebook.

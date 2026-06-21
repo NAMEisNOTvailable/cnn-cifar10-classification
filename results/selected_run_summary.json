@@ -1,7 +1,7 @@
 {
   "run_type": "single executed notebook run",
   "dataset": "CIFAR-10",
-  "note": "These metrics summarize the executed notebook outputs committed with the portfolio project. Future reruns should use the scripted workflow, deterministic split seed, and clean validation transform.",
+  "note": "These metrics summarize the executed notebook outputs committed with this repository. Future reruns should use the scripted workflow, deterministic split seed, and clean validation transform.",
   "models": [
     {
       "model": "ImageNet-pretrained ResNet-18 fine-tuned on CIFAR-10",
